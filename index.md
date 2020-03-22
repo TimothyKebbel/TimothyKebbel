@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="map" style="width: 705px; height: 375px"></div>
-<h1>Hello World22</h1>
+<h1>Hello World</h1>
 <p>Hosted By Github Pages</p>
 <!-- Add the Leaflet JavaScript library -->
 <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js">
