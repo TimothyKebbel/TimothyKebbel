@@ -1,16 +1,21 @@
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-  crossorigin=""/>
+<!DOCTYPE html>
 
-<!-- Make sure you put this AFTER Leaflet's CSS -->
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-  crossorigin=""></script>
-#mapid { height: 180px; }    
 <html>
+<head>
+<!-- External Stylesheets -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+</head>
 <body>
-<div id="mapid"></div>
+<div id="map" style="width: 705px; height: 375px"></div>
 <h1>Hello World22</h1>
 <p>Hosted By Github Pages</p>
+<!-- Add the Leaflet JavaScript library -->
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js">
+  // Create variable to hold map element, give initial settings to map
+  var map = L.map('map',{ center: [42.362432, -71.086086], zoom: 14});
+  // Add OpenStreetMap tile layer to map element
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+</script>
+
 </body>
 </html>
