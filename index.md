@@ -11,7 +11,7 @@
   crossorigin=""></script>
 <!-- map style  -->  
 <style>
-#mapid{ height: 180px; }
+#mapid{ height: 100%; }
 </style>
 
 </head>
