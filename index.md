@@ -2,18 +2,13 @@
 
 <head>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-  crossorigin=""/>
-<!-- Make sure you put this AFTER Leaflet's CSS -->
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-  crossorigin=""></script>
+<link rel="stylesheet" href="./Leaflet-1.0.3/leaflet.css"/>
+<script src="./Leaflet-1.0.3/leaflet.js"></script>
 <!-- map style  -->  
 <style>
 #mapid{ height: 100%; }
 </style>
-
+  
 </head>
 
 <body>
@@ -22,7 +17,7 @@
 <!-- create the map -->
 <!--L.tilelayer example with mapbox api-->
 <script>
-var mymap = L.map('mapid').setView([45.4215, 75.6972], 13);
+var map = L.map('mapid').setView([45.4215, 75.6972], 13);
 L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
   {
     attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
