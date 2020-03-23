@@ -1,29 +1,29 @@
 <html>
+
 <head>
-  <title>A Leaflet map!</title>
-  <link rel="stylesheet" href="./Leaflet-1.0.3/leaflet.css"/>
-  <script src="./Leaflet-1.0.3/leaflet.js"></script>
-  <style>
-    #map{ height: 500px }
-  </style>
+
+<link rel="stylesheet" href="./Leaflet-1.0.3/leaflet.css"/>
+<script src="./Leaflet-1.0.3/leaflet.js"></script>
+<!-- map style  -->  
+<style>
+div#map{ height: 250px; }
+</style>
+
 </head>
+
 <body>
 
-  <div id="map"></div>
+<div id="map"></div>
+<!-- create the map -->
+<!--L.tilelayer example with mapbox api-->
+<script>
+var map = L.map('map').setView([45.4215, 75.6972], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+</script>
 
-  <script>
-
-  // initialize the map
-  var map = L.map('map').setView([42.35, -71.08], 13);
-
-  // load a tile layer
-  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
-    {
-      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
-      maxZoom: 17,
-      minZoom: 9
-    }).addTo(map);
-
-  </script>
 </body>
+
+
 </html>
