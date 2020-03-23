@@ -6,14 +6,14 @@
 <script src="./Leaflet-1.0.3/leaflet.js"></script>
 <!-- map style  -->  
 <style>
-#mapid{ height: 100%; }
+#map{ height: 100%; }
 </style>
-  
+
 </head>
 
 <body>
 
-<div id="mapid"></div>
+<div id="map"></div>
 <!-- create the map -->
 <!--L.tilelayer example with mapbox api-->
 <script>
