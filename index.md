@@ -1,41 +1,27 @@
-
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Testing Map</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" type="text/css" crossorigin="">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" crossorigin=""></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<link rel="stylesheet" href="style.css" type="text/css">
-<script type="text/javascript">
-
-var map;
-function init() {
-   // create map and set center and zoom level
-   map = new L.map('mapid');
-   map.setView([39.9526,-75.1652],13);
-   // create tile layer and add it to map
-   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-     maxZoom: 19,
-     attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-   }).addTo(map);
-}
-
-</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+<!-- map style  -->  
+<style>
+#mapid{ height: 180px; }
+</style>
+  
 </head>
 
+<body>
 
-<body onload="init()">
-<h1 id="title">Heading 1</h1>
-<div id="mapid">
-</div>
-
-<div id="docs">
-<p>This page shows farmers markets in Philadelphia, Pennsylvania. Click a market to get more information.</p>
-</div>
-
+<div id="mapid"></div>
+<!-- create the map -->
+var mymap = L.map('mapid').setView([45.4215, 75.6972], 13);
 </body>
+
 
 </html>
