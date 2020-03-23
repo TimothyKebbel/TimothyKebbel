@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="./Leaflet-1.0.3/leaflet.css"/>
   <script src="./Leaflet-1.0.3/leaflet.js"></script>
   <style>
-    #map{ height: 100% }
+    #map{ height: 500px }
   </style>
 </head>
 <body>
