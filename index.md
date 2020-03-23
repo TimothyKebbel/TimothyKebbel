@@ -22,7 +22,7 @@ div#map{ height: 250px; }
 <!-- create the map -->
 <!--L.tilelayer example with mapbox api-->
 <script>
-var map = L.map('map').setView([45.4215, 75.6972], 13);
+var map = L.map('map').setView([75.6972, 45.4215], 16);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
