@@ -29,7 +29,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 var wmsLayer= L.tileLayer.wms("http://localhost:8080/geoserver/ows?service=wms&version=1.1.1&request=GetCapabilities&format=text/xml", {
     'layers': 'water-bodies',
-    'transparent'= true
+    'transparent': true
 });
 wmsLayer.addto(map);
 </script>
