@@ -27,11 +27,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var wmsLayer= L.tileLayer.wms("http://localhost:8080/geoserver/gitwebmap/wms?service=WMS&version=1.1.0&request=GetMap&layers=gitwebmap%3Awater-bodies&bbox=307750.875%2C4979229.0%2C398178.09375%2C5048017.0&width=768&height=584&srs=EPSG%3A32189&format=text%2Fhtml%3B%20subtype%3Dopenlayers", {
-    layers: 'water-bodies',
-    transparent: false
+var wmsLayer= L.tileLayer.wms("http://localhost:8080/geoserver/ows?service=wms&version=1.1.1&request=GetCapabilities&format=text/xml", {
+    'layers': 'water-bodies',
+    'transparent'= true
 });
-map.addLayer(wmsLayer);
+wmsLayer.addto(map);
 </script>
 
 </body>
+
+
+</html>
