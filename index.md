@@ -27,11 +27,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var wmsLayer= L.tileLayer.wms("http://localhost:8080/geoserver/ows?service=wms&version=1.1.1&request=GetCapabilities&format=text/xml", {
-    'layers': 'water-bodies',
-    'transparent': true
-}).addto(map);
-
+var wmsLayer = L.tileLayer.wms('http://localhost:8080/geoserver/testing/wms', {
+    layers: 'testing:water-bodies',
+    format: 'image/png',
+    transparent = true
+});
+wmsLayer.addto(map);
 </script>
 
 </body>
