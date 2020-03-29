@@ -32,7 +32,7 @@ var wmsLayer = L.tileLayer.wms('http://localhost:8080/geoserver/testing/wms', {
     format: 'image/png',
     transparent: true
 });
-wmsLayer.addto(map);
+wmsLayer.addTo(map);
 </script>
 
 </body>
