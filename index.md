@@ -30,7 +30,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var wmsLayer = L.tileLayer.wms('http://localhost:8080/geoserver/testing/wms', {
     layers: 'testing:water-bodies',
     format: 'image/png',
-    transparent = true
+    transparent: true
 });
 wmsLayer.addto(map);
 </script>
