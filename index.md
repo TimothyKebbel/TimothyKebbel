@@ -33,7 +33,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 L.esri.featureLayer({
   url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases_US/',
-  opacity: 0.7
 }).addTo(map);
 
 </script>
