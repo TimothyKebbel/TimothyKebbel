@@ -26,13 +26,15 @@ div#map{ height: 250px; }
 <!-- create the map -->
 <!--L.tilelayer example with mapbox api-->
 <script>
-var map = L.map('map').setView([45.4215, -75.6972], 2);
+var basemap = L.map('map').setView([45.4215, -75.6972], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 L.esri.dynamicMapLayer({
-  url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1',
+  url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer',
+  layers: [1],
+  opacity: 1
 }).addTo(map);
 
 </script>
