@@ -33,6 +33,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 L.esri.dynamicMapLayer({
   url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases_US/',
+  layers: [0]
 }).addTo(map);
 
 </script>
