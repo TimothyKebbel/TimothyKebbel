@@ -45,11 +45,7 @@
   // a Leaflet marker is used by default to symbolize point features.
   L.esri.featureLayer({
     url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1',
-    pointToLayer: function(geojson, Confirmed) {
-      return L.marker(Confirmed, {
-        icon: icon
-      });
-    }
+      icon: icon
   }).addTo(map);
 </script>
 
