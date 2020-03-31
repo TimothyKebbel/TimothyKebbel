@@ -9,6 +9,7 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
       crossorigin=""></script>
+    <script src="esri-leaflet.js"></script>
 <!-- map style  -->  
 <style>
 div#map{ height: 250px; }
@@ -27,12 +28,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var wmsLayer = L.tileLayer.wms('http://localhost:8080/geoserver/testing/wms', {
-    layers: 'testing:water-bodies',
-    format: 'image/png',
-    transparent: true
-});
-wmsLayer.addTo(map);
+var wmsLayer = L.esri.tiledMapLayer("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases_US/FeatureServer", {
+  opacity: 1
+
+}).wmsLayer.addTo(map);
+
 </script>
 
 </body>
