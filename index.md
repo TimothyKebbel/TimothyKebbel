@@ -23,7 +23,12 @@
 
   <style>
     body { margin:0; padding:0; }
-    #map { height: 500px; }
+    #map {
+      position: relative;
+      height: 500px;
+      width: 500px;
+      left: 10px;
+    }
   </style>
 </head>
 <body>
@@ -41,7 +46,7 @@
   L.esri.featureLayer({
     url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1',
     pointToLayer: function(geojson, latLng) {
-      return L.marker(Confirmed, {
+      return L.marker(latLng, {
         icon: L.icon.glyph({
           prefix: '',
           glyph: geojson.properties.Confirmed
