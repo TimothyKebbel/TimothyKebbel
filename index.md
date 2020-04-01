@@ -50,7 +50,7 @@
   L.esri.featureLayer({
     url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1',
     pointToLayer: function(geojson, latLng) {
-      return L.marker(latLng, { icon: conFs});
+      return L.marker(latLng, { icon: iconFs});
     }
   }).addTo(map);
 </script>
