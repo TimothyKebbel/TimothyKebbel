@@ -27,7 +27,7 @@
       position: relative;
       height: 500px;
       width: 500px;
-      left: 10px;
+      left: 250px;
     }
   </style>
 </head>
@@ -40,18 +40,17 @@
 
   L.esri.basemapLayer('Streets').addTo(map);
 
-
+  var iconFs = L.icon({
+    iconUrl: 'https://esri.github.io/esri-leaflet/img/earthquake-icon.png',
+    iconSize: [27, 31],
+    iconAnchor: [13.5, 17.5],
+  });
 
   // a Leaflet marker is used by default to symbolize point features.
   L.esri.featureLayer({
     url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1',
     pointToLayer: function(geojson, latLng) {
-      return L.marker(latLng, {
-        icon: L.icon.glyph({
-          prefix: '',
-          glyph: geojson.properties.Confirmed
-          })
-      });
+      return L.marker(latLng, { icon: conFs});
     }
   }).addTo(map);
 </script>
