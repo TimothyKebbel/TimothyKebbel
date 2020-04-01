@@ -27,7 +27,7 @@
       position: relative;
       height: 500px;
       width: 500px;
-      left: 250px;
+      right: 50px;
     }
   </style>
 </head>
@@ -50,7 +50,11 @@
   L.esri.featureLayer({
     url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1',
     pointToLayer: function(geojson, latLng) {
-      return L.marker(latLng, { icon: iconFs});
+       return new L.CircleMarker(latLng, {
+         radius: 5,
+         color: '#FF0000'
+
+       });
     }
   }).addTo(map);
 </script>
