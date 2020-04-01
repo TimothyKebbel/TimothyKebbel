@@ -47,16 +47,18 @@
   });
 
   // a Leaflet marker is used by default to symbolize point features.
-  L.esri.featureLayer({
+  var covid = L.esri.featureLayer({
     url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1',
     pointToLayer: function(geojson, latLng) {
        return new L.CircleMarker(latLng, {
-         radius: 5,
+         radius: covid.properties.Confirmed,
          color: '#FF0000'
 
        });
     }
-  }).addTo(map);
+  })
+
+covid.addTo(map);
 </script>
 
 </body>
